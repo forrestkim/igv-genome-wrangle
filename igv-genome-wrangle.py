@@ -1,5 +1,8 @@
-
 # Automated UCSC Genome Wrangler for IGV 
+
+# Can use a list instead of raw input
+#id_list = []
+#for genome_id in id_list:
 
 # Input genome ID
 genome_id = input("Print Genome ID: ")
@@ -8,6 +11,7 @@ genome_id = input("Print Genome ID: ")
 import os
 try:
     os.mkdir(genome_id)
+    os.chdir(genome_id)
 except FileExistsError:
     os.chdir(genome_id)
 
